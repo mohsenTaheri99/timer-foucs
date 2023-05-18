@@ -1,4 +1,7 @@
 import React, { useEffect, useState } from 'react'
+
+import SecondsCounter from '../../Component/SecondsCounter'
+
 import "./Timer.css"
 function Timer(props) {
   const [time , SetTime] = useState((t)=> {
@@ -35,7 +38,7 @@ function Timer(props) {
   return (
     <div className="main-cuntener">
         <div className="timer">
-          {parseInt(time/60)}:{time%60}
+          <SecondsCounter time = {time}/>
           <button onClick={()=> SetIsPlay((s)=> !s )}>{isPlay? "pause" : "play"}</button>
         </div>
     </div>
