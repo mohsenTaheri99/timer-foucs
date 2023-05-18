@@ -11,10 +11,10 @@ import { useState } from 'react';
 
 
 function App() {
-  const [shorbreakTime , setShorBreakTime] = useState(2);
-  const [longBreakTime , setLongBreakTime] = useState(10);
-  const [workingTime , setWorkingTime] = useState(15);
-  const [shortBreakinterval , setShortBreakInterval] = useState(3);
+  const [shorbreakTime , setShorBreakTime] = useState(5 * 60 );
+  const [longBreakTime , setLongBreakTime] = useState(20 * 60 );
+  const [workingTime , setWorkingTime] = useState(25* 60 );
+  const [shortBreakinterval , setShortBreakInterval] = useState(4);
   const [season , setSeason] = useState(1);
   const [shortBreakCount , setShortBreakCount] = useState(0);
   const [isWorking , setIsWorking] = useState(true);
