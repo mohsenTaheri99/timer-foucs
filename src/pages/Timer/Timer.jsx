@@ -38,7 +38,7 @@ function Timer(props) {
   return (
     <div className="main-cuntener">
         <div className="timer">
-          <SecondsCounter time = {time}/>
+          <SecondsCounter time = {time }/>
           <button onClick={()=> SetIsPlay((s)=> !s )}>{isPlay? "pause" : "play"}</button>
         </div>
     </div>
