@@ -28,7 +28,6 @@ function App() {
       if(shortBreakCount === shortBreakinterval) setShortBreakCount(0)
       else setShortBreakCount((s)=> s+1)
     }
-    console.log("season:" + season)
   }
 
  
@@ -38,7 +37,7 @@ function App() {
       <BrowserRouter>
           <Routes> 
             <Route path='/' element={<Navbar/>} >
-              <Route path='/' element={<Timer longBreakTime={longBreakTime} shorbreakTime={shorbreakTime}  timeEnd={timeEnd} workingTime={workingTime} isWorking={isWorking} shortBreakCount={shortBreakCount} shortBreakinterval={shortBreakinterval} />}/>
+              <Route path='/' element={<Timer longBreakTime={longBreakTime} shorbreakTime={shorbreakTime}  timeEnd={timeEnd} workingTime={workingTime} isWorking={isWorking} shortBreakCount={shortBreakCount} shortBreakinterval={shortBreakinterval} season={season}/>}/>
               <Route path='setting' element={<h3>setting</h3>}/>
               <Route path='account' element={<h3>account</h3>}/>
             </Route>

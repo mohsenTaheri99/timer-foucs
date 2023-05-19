@@ -30,12 +30,13 @@ a {
   min-width: 800px;
   max-height: 800px;
   
-  color: #131313;
-  --mian-timer-red : #c1fdf5;
-  --background : #fff3fd;
-  --nav-blue-active : #f01818;
-  --buttom : #c1f3fd;
-  --side-bar: #fdc1ed;
+  color: #1a1a1a;
+  --mian-timer-red : #ffffff;
+  --background : #f0eefc;
+  --nav-blue-active : #6075e9;
+  --buttom : #6075e9;
+  --side-bar: #ffffff;
+  --timer--scb : black;
 
   
 

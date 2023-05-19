@@ -1,10 +1,15 @@
 import React, { useEffect, useState } from 'react'
 
 import SecondsCounter from '../../Component/SecondsCounter'
+import {  BsFillPlayFill,BsPauseFill,BsFillSkipEndFill } from "react-icons/bs";
+import {  GrPowerReset } from "react-icons/gr";
 
-import "./Timer.css"
+
+
+import "./Timer.css";
+import TimerScb from '../../Component/timerscb/TimerScb'
 function Timer(props) {
-  const [time , SetTime] = useState((t)=> {
+  const [time , setTime] = useState((t)=> {
     if(props.isWorking){ return props.workingTime}
     else {return props.shortBreakCount <= props.shortBreakinterval ? props.shorbreakTime : props.longBreakTime}
   });
@@ -13,7 +18,7 @@ function Timer(props) {
 
   useEffect(() => {
     if(isPlay){
-      const interval = setInterval(() => SetTime((t)=>t-1), 1000);
+      const interval = setInterval(() => setTime((t)=>t-1), 1000);
       return () => clearInterval(interval);
     }
   }, [isPlay]);
@@ -21,28 +26,38 @@ function Timer(props) {
     if(time === 0){
       props.timeEnd();
       SetIsPlay((s)=> !s );
-      
-
-      console.log(props)
     }
 
   },[time ])
 
-  useEffect(()=>{ SetTime((t)=> {
+  useEffect(()=>{setTime((t)=> resetTime() )},[props.isWorking])
+
+  const resetTime = function(){
     if(props.isWorking){ return props.workingTime}
     else {return props.shortBreakCount < props.shortBreakinterval ? props.shorbreakTime : props.longBreakTime}
-    } );
-    console.log('render')
-  },[props.isWorking])
+  }
 
   return (
     <div className="main-cuntener">
         <div className="timer">
-          <SecondsCounter time = {time }/>
-          <button onClick={()=> SetIsPlay((s)=> !s )}>{isPlay? "pause" : "play"}</button>
+          <TimerScb time={time} maxTime={resetTime()}/>
+          <div className=''>
+              {props.isWorking? 'working': 'break time'}
+          </div>
+          <div>
+            {'#'+props.season}
+          </div>
+          <SecondsCounter time = {time} className="show-time"/>
+          <div className='control'>
+            <button onClick={()=>{SetIsPlay(false);setTime((t)=>resetTime())}} className='s-button'>{<GrPowerReset/>}</button>
+            <button onClick={()=> SetIsPlay((s)=> !s )} className='l-button'>{isPlay?  <BsPauseFill/> :<BsFillPlayFill/>}</button>
+            <button onClick={props.timeEnd} className='s-button'>{<BsFillSkipEndFill/>}</button>
+          </div>
         </div>
     </div>
   );
 }
+
+
 
 export default Timer

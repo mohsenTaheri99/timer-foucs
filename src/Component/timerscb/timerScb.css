@@ -1,0 +1,19 @@
+.timer-Scb{
+    height: 2px;
+    background: var(--timer--scb);
+    position: absolute;
+    transition: 1s;
+    top: 0  ;
+    right: 0;
+}
+.timer-Scb::after{
+    content: '';
+    background:var(--nav-blue-active);
+    position: absolute;
+    width: 3px;
+    height: 6px;
+    left: 0;
+    top: 50%;
+    transform: translate(-100%,-50%);
+
+}
