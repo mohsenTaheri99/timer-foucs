@@ -9,10 +9,12 @@
 
 
 .main-cuntener{
-    width: calc(100% - 310px);
-    padding: 30px;
+    width: calc(100% - 250px);
+    padding:  30px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: start;
+    position: relative;
+    overflow-y: auto;
 }
 

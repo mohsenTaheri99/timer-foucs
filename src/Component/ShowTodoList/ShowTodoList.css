@@ -1,0 +1,97 @@
+.show-todo-list{
+    width: 100%;
+    padding: 0 20%;
+    margin-top: 1px;
+    background: rgb(88, 60, 165);
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: 2s;
+    
+}
+
+.show-todo-list ul li{
+    position: relative;
+    width: 100%;
+    background: var(--input-backgrund );
+    margin: 10px;
+    padding: 10px;
+    text-align: end;
+    font-size: 12px;
+    display: flex;
+    flex-direction: row-reverse;
+}
+.show-todo-list ul li span{
+    flex-grow: 1;
+}
+.show-todo-list ul li button{
+    color: white;
+    
+}
+.show-todo-list ul li .complete{
+    color: rgb(60, 212, 30);
+    animation: comp 0.1s ;
+
+}
+@keyframes comp {
+    from{
+        transform: translate(-200px,-200px) scale(10);
+    }
+    to{
+        transform: translate(-100%,-50%) scale(1.2);
+    }
+    
+}
+.show-todo-list ul li .check{
+    color: rgb(214, 214, 214);
+}
+.show-todo-list ul li .checkmark:hover{
+    transform: translate(-100%,-50%) scale(1.7);
+
+}
+
+.show-todo-list ul li .checkmark{
+    background: transparent;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-100%,-50%) scale(1.5);
+}
+
+.show-todo-list ul li .edit{
+    color: rgb(240, 240, 240);
+    background: var(--input-backgrund );
+    background: transparent;
+}
+.show-todo-list ul li .edit:hover{
+    transform: scale(1.3);
+    transition: 0.2s;
+}
+
+
+.show-todo-list ul li .delete{
+    color: rgb(240, 240, 240);
+    background: var(--input-backgrund );
+    background: transparent;
+}
+.show-todo-list ul li .delete:hover{
+    transform: scale(1.3);
+    transition: 0.2s;
+    color: rgb(253, 41, 41);
+}
+.cuntener-todo-b{
+    border-right: 1px white solid;
+}
+.show-todo-list ul {
+    width: 100%;
+}
+.color-todo{
+    width: 15px;
+    height: 15px;
+    background: white;
+    border-radius: 50%;
+    margin-left: 10px;
+    border: 1px solid white;
+}

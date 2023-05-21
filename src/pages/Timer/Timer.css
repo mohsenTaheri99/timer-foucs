@@ -1,14 +1,14 @@
+.cuntener-t-b{
+    flex-grow: 1;
+}
 .timer{
-    flex-grow: 0;
     height: 200px;
     background: var(--mian-timer-red);
-    flex-grow: 1;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
     font-size: medium;
-
     position: relative;
 
 }
@@ -39,9 +39,3 @@
     width: 100px;
 }
 
-/* .brack-img{
-    width: 100%;
-    height: auto;
-    width: 260px; height: 300px; object-fit: cover; object-position: 20% 0 ;
-
-} */

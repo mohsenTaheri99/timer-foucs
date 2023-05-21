@@ -1,0 +1,50 @@
+#root{
+    --input-backgrund : #1b0c46;
+}
+.todo-form {
+    width: 100%;
+    padding: 10px;
+    background: rgb(88, 60, 165);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.cuntener-input{
+    display: flex;
+    flex-direction: row-reverse;
+}
+.todo-form input[type='text']{
+    background: var(--input-backgrund);
+    border: 1px solid rgb(107, 105, 110);
+    width: 300px;
+    padding: 6px 20px;
+    text-align: end;
+    border-radius:0 5px 5px 0;
+    margin-left: 1px;
+    color: white;
+}
+.todo-form input[type='submit']{
+    background: var(--input-backgrund);
+    border: 1px solid rgb(107, 105, 110);
+    color: white;
+    width: 50px;
+    border-radius: 5px 0 0 5px;
+    cursor: pointer;
+    
+
+}
+.todo-form input[type='color']{
+    background: var(--input-backgrund);
+    border: 1px solid rgb(107, 105, 110);
+    color: white;
+    width: 25px;
+    height: inherit;
+    cursor: pointer;
+    
+
+}
+
+
+.todo-form input::placeholder {
+    color: rgb(211, 211, 211);
+  }

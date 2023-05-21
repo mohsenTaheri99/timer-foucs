@@ -2,7 +2,8 @@
     height: 2px;
     background: var(--timer--scb);
     position: absolute;
-    transition: 1s;
+    transition: 1s linear;
+    width: 10%;
     top: 0  ;
     right: 0;
 }
@@ -16,4 +17,11 @@
     top: 50%;
     transform: translate(-100%,-50%);
 
+}
+.back-scb{
+    position: absolute;
+    top: 10px;
+    width: 90%;
+    height: 1px;
+    background: rgb(226, 226, 226);
 }

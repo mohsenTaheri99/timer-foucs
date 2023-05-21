@@ -19,10 +19,10 @@ function App() {
   const [shortBreakCount , setShortBreakCount] = useState(0);
   const [isWorking , setIsWorking] = useState(true);
 
-  function timeEnd(){
+  function timeEnd(time){
     setIsWorking((s)=>!s)
     if(isWorking){
-      
+        console.log(workingTime - time )
     }else{
       setSeason((s)=> s+1 )
       if(shortBreakCount === shortBreakinterval) setShortBreakCount(0)
