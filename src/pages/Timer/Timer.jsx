@@ -39,21 +39,23 @@ function Timer(props) {
   }
 
   return (
-    <div className="main-cuntener">
-        <div className="cuntener-t-b">
-          <div className='timer'>
-            <TimerScb time={time} maxTime={resetTime()}/>
-            <div className=''>
-                {props.isWorking? 'working': 'break time'}
-            </div>
-            <div>
-              {'#'+props.season}
-            </div>
-            <SecondsCounter time = {time} className="show-time"/>
-            <div className='control'>
-              <button onClick={()=>{SetIsPlay(false);setTime((t)=>resetTime())}} className='s-button'>{<GrPowerReset/>}</button>
-              <button onClick={()=> SetIsPlay((s)=> !s )} className='l-button'>{isPlay?  <BsPauseFill/> :<BsFillPlayFill/>}</button>
-              <button onClick={()=> props.timeEnd(time)} className='s-button'>{<BsFillSkipEndFill/>}</button>
+    <div className="main-cuntener" >
+        <div className="cuntener-t-b" >
+          <div className='padding-time' >
+            <div className='timer'style={{background: props.isWorking? "#d6365b": "#42eff5"}}>
+              <TimerScb time={time} maxTime={resetTime()}/>
+              <div className=''>
+                  {props.isWorking? 'working': 'break time'}
+              </div>
+              <div>
+                {'#'+props.season}
+              </div>
+              <SecondsCounter time = {time} className="show-time"/>
+              <div className='control'>
+                <button onClick={()=>{SetIsPlay(false);setTime((t)=>resetTime())}} className='s-button'>{<GrPowerReset/>}</button>
+                <button onClick={()=> SetIsPlay((s)=> !s )} className='l-button'>{isPlay?  <BsPauseFill/> :<BsFillPlayFill/>}</button>
+                <button onClick={()=> props.timeEnd(time)} className='s-button'>{<BsFillSkipEndFill/>}</button>
+              </div>
             </div>
           </div>
           <Todo/>

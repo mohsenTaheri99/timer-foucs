@@ -18,12 +18,13 @@
     background: var(--input-backgrund );
     margin: 10px;
     padding: 10px;
+    padding-right: 30px;
     text-align: end;
     font-size: 12px;
     display: flex;
     flex-direction: row-reverse;
 }
-.show-todo-list ul li span{
+.show-todo-list ul li p{
     flex-grow: 1;
 }
 .show-todo-list ul li button{
@@ -88,10 +89,16 @@
     width: 100%;
 }
 .color-todo{
-    width: 15px;
-    height: 15px;
-    background: white;
-    border-radius: 50%;
+    position: absolute;
+    right: -50px;
+    transform: translate(0,-50%);
+    top: 50%;
+    width: 30px;
+    height: 30px;
+    /* border-radius: 50%; */
     margin-left: 10px;
-    border: 1px solid white;
+    /* border: 1px solid white; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

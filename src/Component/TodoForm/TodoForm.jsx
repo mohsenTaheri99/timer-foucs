@@ -4,7 +4,7 @@ import './TodoForm.css'
 
 function TodoForm({setTodo}) {
     const [input,setInput]= useState('')
-    const [color,setColor]= useState('#1b0c46')
+    const [color,setColor]= useState('#9900FF')
 
     function handleColorChenge(e){
       const inputColor = e.target.value

@@ -1,7 +1,13 @@
 .cuntener-t-b{
     flex-grow: 1;
 }
+.padding-time{
+    padding-left: 10%;
+    padding-right: 10%;
+
+}
 .timer{
+    flex-grow: 1;
     height: 200px;
     background: var(--mian-timer-red);
     display: flex;
@@ -10,6 +16,7 @@
     flex-direction: column;
     font-size: medium;
     position: relative;
+    transition: 2s;
 
 }
 .show-time{
