@@ -1,0 +1,65 @@
+.setting-cuntener{
+    background: white;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+
+}
+.settings{
+    width: 400px;
+    height: 600px;
+    background: rgb(153, 121, 62);
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+.range-inputs{
+    margin-top: 20px;
+    width: 100%;
+}
+.settings .range{
+    height: 50px;
+    width: inherit;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.settings .range span{
+    width: 30%;
+    text-align: end;
+}
+.settings .range input {
+    width: 200px;
+}
+.settings .range .input-show {
+    width: 40px;
+    text-align: center;
+}
+
+.tagles-setting{
+    width: 100%;
+}
+.tagles-setting .tagle {
+    height: 50px;
+    width: inherit;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+}
+.tagles-setting .tagle input {
+    width: 20%;
+    margin-left:40%;
+    height: 20px;
+}
+.tagles-setting .tagle span{
+    width: 30%;
+    text-align: end;
+}
