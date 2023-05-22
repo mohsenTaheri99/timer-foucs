@@ -7,6 +7,9 @@ import {
 
 import Navbar from './pages/Navbar/Navbar';
 import Timer from './pages/Timer/Timer';
+import Setting from './pages/Setting/Setting';
+
+
 import { useState } from 'react';
 
 
@@ -18,6 +21,8 @@ function App() {
   const [season , setSeason] = useState(1);
   const [shortBreakCount , setShortBreakCount] = useState(0);
   const [isWorking , setIsWorking] = useState(true);
+  const [ColorBG , setColorBG] = useState(true);
+
 
   function timeEnd(time){
     setIsWorking((s)=>!s)
@@ -30,7 +35,7 @@ function App() {
     }
   }
 
- 
+
   return (
     <div className="App">
 
@@ -38,7 +43,7 @@ function App() {
           <Routes> 
             <Route path='/' element={<Navbar/>} >
               <Route path='/' element={<Timer longBreakTime={longBreakTime} shorbreakTime={shorbreakTime}  timeEnd={timeEnd} workingTime={workingTime} isWorking={isWorking} shortBreakCount={shortBreakCount} shortBreakinterval={shortBreakinterval} season={season}/>}/>
-              <Route path='setting' element={<h3>setting</h3>}/>
+              <Route path='setting' element={<Setting setShorBreakTime={setShorBreakTime} setLongBreakTime={setLongBreakTime} setWorkingTime={setWorkingTime} shorbreakTime={shorbreakTime} longBreakTime={longBreakTime} workingTime={workingTime}/>}/>
               <Route path='account' element={<h3>account</h3>}/>
             </Route>
             <Route path='/login' element={<h1>login page</h1>}/>
