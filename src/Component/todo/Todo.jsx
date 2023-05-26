@@ -10,13 +10,13 @@ import ShowTodoList from '../ShowTodoList/ShowTodoList';
 
 
 
-function Todo() {
+function Todo({ColorBG}) {
   const [todo,setTodo] = useState([])
   
   return (
-    <div className='todo'>
-        <TodoForm setTodo={setTodo} todo={todo}/>
+    <div className='todo' >
         <ShowTodoList todo={todo} setTodo={setTodo}/>
+        <TodoForm setTodo={setTodo} todo={todo}/>
     </div>
   )
 }

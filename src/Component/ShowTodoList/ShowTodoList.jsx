@@ -104,24 +104,31 @@ function ShowTodoList({todo,setTodo}) {
 
     const list = todo;
   return (
-    <div className='show-todo-list'>
+    <div className='show-todo-list'onKeyDown={(e)=> e.key ==="Enter"?setediteItem('') : 0 }>
         
-        <ul>
+        <ul >
             {list.map((i,index)=>{
                 const id = i.id
-                return  <li key={id} id={id}>
+                return  <li key={id} id={id} >
                             <div className="color-todo" style={{background: i.color}}>
                                 <div>{index+1}</div>
                             </div>
-                            <p>{i.todo}</p>                         
-                            <button className={` ${i.complete? "complete":"check"} checkmark`} id={id}  onClick={complete}><GiCheckMark/></button>
-                            <div className='cuntene-todo-b'>
-                                <button className='edit'id={id} onClick={()=>setediteItem(id)}><AiOutlineEdit/></button>
+                            <div className='noteTodo' style={{textDecoration: i.complete?'line-through green 2px': '' }}>
+                                <h3>{i.todo}</h3>
+                                {i.note.map((note)=> <p>{note}</p>)}
                             </div>
-                            <div className='cuntener-todo-b'>
-                                <button className='delete' id={id} onClick={deleteTodo}><RiDeleteBin5Line/></button>
+                            <div className="button-cunteber-todo">
+                                <div className='cuntener-todo-b'>
+                                    <button className={` ${i.complete? "complete":"check"} checkmark `} id={id}  onClick={complete}><GiCheckMark/></button>
+                                </div>
+                                <div className='cuntener-todo-b'>
+                                    <button className='edit'id={id} onClick={()=>setediteItem(id)}><AiOutlineEdit/></button>
+                                </div>
+                                <div className='cuntener-todo-b'>
+                                    <button className='delete' id={id} onClick={deleteTodo}><RiDeleteBin5Line/></button>
+                                </div>
                             </div>
-                         <EditeTodo id={id} todo={i.todo} setTodo={setTodo} moveEditeUp={moveEditeUp} moveEditeDown={moveEditeDown} callback={editeEnd} style={{display: editeItem === id ? '':"none"} }/>
+                         {editeItem === id ?<EditeTodo id={id} todo={i.todo} setTodo={setTodo} moveEditeUp={moveEditeUp} moveEditeDown={moveEditeDown} callback={editeEnd} />: ''}
                         </li>
             })}           
         </ul>

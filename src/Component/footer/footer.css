@@ -1,0 +1,20 @@
+.footer-cuntener{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+}
+.sosial-cuntener{
+    width: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom:20px ;
+}
+.sosial-cuntener a {
+    height: 35px;
+    font-size: 25px;
+}

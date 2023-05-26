@@ -1,14 +1,82 @@
-.cuntener-t-b{
-    flex-grow: 1;
+.main-time-cuntener{
+    position: relative;
+    flex-grow:3 ;
+    padding: 15px;
+    display: grid;
+    grid-gap: 15px;
+    grid-template-columns: 60px 1fr 1fr 1fr;
+    grid-template-rows: 60px 250px calc(100% - 60px - 250px - 30px);
+    grid-template-areas: 
+        "header header header header"
+        "footer time  timer timer"
+        "footer todo todo todo";
+
+
 }
-.padding-time{
-    padding-left: 10%;
-    padding-right: 10%;
+
+@media screen and (max-width: 1000px) {
+    .main-time-cuntener{
+        grid-template-columns: 60px 1fr 1fr 1fr;
+        grid-template-rows: 60px 60px 250px calc(100% - 60px - 60px - 250px - 45px);
+        grid-template-areas: 
+            "header header header header"
+            "time time  time time"
+            "footer timer  timer timer"
+            "footer todo todo todo";
+    
+    
+    }
+    
+}
+@media screen and (max-width: 600px) {
+    .main-time-cuntener{
+        grid-template-columns:  1.1fr 1fr;
+        grid-template-rows: 60px calc(100% - 200px - 60px - 105px) 200px 60px;
+        grid-template-areas: 
+            "header header"
+            "todo timer"
+            "todo time"
+            "footer footer";
+    }
+}
+
+.todo-timer-cuntener{
+    position: relative;
+    grid-area: todo;
+
+    background-image:  radial-gradient(#D4A373 1.2000000000000002px, transparent 1.2000000000000002px), radial-gradient(#D4A373 1.2000000000000002px, #faedcd 1.2000000000000002px);
+    background-size: 48px 48px;
+    background-position: 0 0,24px 24px;
+
+    border-radius: 10px;
+    box-shadow: var(--sh-b);
+
+}
+.main-time-cuntener footer{
+    grid-area: footer;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--sh-b);
+
+}
+.time-date{
+    grid-area: time;
+    background: white;
+    border-radius: 10px;
+    box-shadow: var(--sh-b);
+
+}
+.time-header{
+    grid-area: header;
+    background: #FAEDCD;
+    width: 100%;
+    border-radius: 10px;
+    box-shadow: var(--sh-b);
 
 }
 .timer{
-    flex-grow: 1;
-    height: 200px;
+    grid-area: timer;
+    border-radius: 10px;
     background: var(--mian-timer-red);
     display: flex;
     justify-content: center;
@@ -16,8 +84,8 @@
     flex-direction: column;
     font-size: medium;
     position: relative;
-    transition: 2s;
-
+    transition: background-color 2s;
+    box-shadow: var(--sh-b);
 }
 .show-time{
     font-size: 50px;
@@ -27,22 +95,36 @@
     display: flex;
 }
 .timer .control button{
-    background: var(--buttom);
-    border: none;
+    /* border: none; */
     margin: 1px;
     display: flex;
     justify-content: center;
+    color: rgb(37, 150, 190) ;
     align-items: center;
 
 }
-.s-button{
+.timer .control .s-button{
     font-size: 20px;
     width: 50px ;
+    /* border: 1px solid #6090e9; */
+    background: #e3eeff;
+    /* border-radius: 10px; */
     
 }
 
-.l-button{
+.timer .control .l-button{
+    /* border-radius: 10px; */
     font-size: 30px;
     width: 100px;
+    color: white;
+    background: rgb(37, 150, 190);
+
 }
 
+.currentPosition{   
+    padding: 5px 10px;
+    border-radius: 10px;
+    width: 150px;
+    text-align: center;
+    transition: 0.5s;
+}   

@@ -1,50 +1,114 @@
 #root{
-    --input-backgrund : #1b0c46;
+    --input-backgrund : #1f1f1fa9;
+}
+.add-some-todo{
+    width: 100%;
+    padding-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+.display-form{
+    position: absolute;
+    bottom: 25px; 
+    left: 25px;
+    font-size: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: white;
+    padding: 10px;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+}
+
+.confirm-button{
+    font-size: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    width: 50px;
+    height: 100px;  
+}
+.close-form{
+    color: rgb(224, 86, 86);
 }
 .todo-form {
+    position: relative;
     width: 100%;
-    padding: 10px;
-    background: rgb(88, 60, 165);
     display: flex;
-    flex-direction: column;
+    flex-direction: row-reverse;
     align-items: center;
+    justify-content: center;
+    height: fit-content;
+    background: rgba(0, 0, 0, 0.103);
+    padding-top: 10px;
+    padding-bottom: 10px;
+
 }
 .cuntener-input{
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: calc(100% - 120px);
 }
-.todo-form input[type='text']{
-    background: var(--input-backgrund);
-    border: 1px solid rgb(107, 105, 110);
-    width: 300px;
-    padding: 6px 20px;
+.todo-form input[type='text'],
+.todo-form textarea{
+    border: none;
+    background: transparent;
+    width: 100%;
     text-align: end;
-    border-radius:0 5px 5px 0;
-    margin-left: 1px;
+    margin-right: 10px;
     color: white;
 }
-.todo-form input[type='submit']{
-    background: var(--input-backgrund);
-    border: 1px solid rgb(107, 105, 110);
-    color: white;
-    width: 50px;
-    border-radius: 5px 0 0 5px;
-    cursor: pointer;
-    
+.todo-form textarea{
+    resize: none;
+    overflow-y: hidden;
+    height: 50px;
+}
+.todo-form .title{
+    font-size: 15px;
+    padding: 5px;
+}
+.todo-form .note{
+    font-size: 10px;
+    padding: 5px;
 
 }
+.todo-form button[type='submit']{
+    color: rgb(0, 197, 0);
+}
+
 .todo-form input[type='color']{
-    background: var(--input-backgrund);
-    border: 1px solid rgb(107, 105, 110);
-    color: white;
-    width: 25px;
-    height: inherit;
+    background: transparent;
+    overflow: hidden;
+    width: 30px;
+    height: 30px;
+    padding: 0;
+    height: 30px;
     cursor: pointer;
     
 
 }
+.todo-form input[type="color"]::-webkit-color-swatch-wrapper {
+	padding: 0;
+}
+.todo-form input[type="color"]::-webkit-color-swatch {
+	border: none;
+}
+.todo-form input[type='color']:focus,.todo-form input[type='text']:focus{
+    /* border: 1px solid rgb(255, 255, 255); */
+
+}
 
 
-.todo-form input::placeholder {
-    color: rgb(211, 211, 211);
-  }
+.todo-form input::placeholder,
+.todo-form textarea::placeholder {
+    color: rgb(240, 240, 240);
+    
+}
+ 

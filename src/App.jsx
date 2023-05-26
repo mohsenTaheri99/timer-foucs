@@ -11,38 +11,58 @@ import Setting from './pages/Setting/Setting';
 
 
 import { useState } from 'react';
+import { useEffect } from 'react';
 
 
 function App() {
   const [shorbreakTime , setShorBreakTime] = useState(5 * 60 );
   const [longBreakTime , setLongBreakTime] = useState(20 * 60 );
   const [workingTime , setWorkingTime] = useState(25* 60 );
-  const [shortBreakinterval , setShortBreakInterval] = useState(4);
+  const [shortBreakinterval , setShortBreakInterval] = useState(3);
   const [season , setSeason] = useState(1);
   const [shortBreakCount , setShortBreakCount] = useState(0);
   const [isWorking , setIsWorking] = useState(true);
-  const [ColorBG , setColorBG] = useState(true);
+  const [ColorBG , setColorBG] = useState('#d6365b');
 
 
   function timeEnd(time){
     setIsWorking((s)=>!s)
     if(isWorking){
-        console.log(workingTime - time )
+        console.log(workingTime - time )  
     }else{
       setSeason((s)=> s+1 )
-      if(shortBreakCount === shortBreakinterval) setShortBreakCount(0)
-      else setShortBreakCount((s)=> s+1)
+      if(shortBreakCount === shortBreakinterval) {
+        setShortBreakCount(0)  
+      }
+      else {
+        setShortBreakCount((s)=> s+1);
+      }
     }
   }
 
+  useEffect(()=>{
+    if(isWorking){
+        setColorBG( '#cdb4db' )
+    }else{
+      setSeason((s)=> s+1 )
+      if(shortBreakCount === shortBreakinterval) {
+   
+        setColorBG( '#a2d2ff' )
+      }
+      else {
+        setColorBG( '#bde0fe' )
+      }
+    }
+  },[isWorking])
+
 
   return (
-    <div className="App">
+    <div className="App" style={{backgroundColor: ColorBG + '5' }}>
 
       <BrowserRouter>
           <Routes> 
             <Route path='/' element={<Navbar/>} >
-              <Route path='/' element={<Timer longBreakTime={longBreakTime} shorbreakTime={shorbreakTime}  timeEnd={timeEnd} workingTime={workingTime} isWorking={isWorking} shortBreakCount={shortBreakCount} shortBreakinterval={shortBreakinterval} season={season}/>}/>
+              <Route path='/' element={<Timer ColorBG={ColorBG} longBreakTime={longBreakTime} shorbreakTime={shorbreakTime}  timeEnd={timeEnd} workingTime={workingTime} isWorking={isWorking} shortBreakCount={shortBreakCount} shortBreakinterval={shortBreakinterval} season={season}/>}/>
               <Route path='setting' element={<Setting setShorBreakTime={setShorBreakTime} setLongBreakTime={setLongBreakTime} setWorkingTime={setWorkingTime} shorbreakTime={shorbreakTime} longBreakTime={longBreakTime} workingTime={workingTime}/>}/>
               <Route path='account' element={<h3>account</h3>}/>
             </Route>
