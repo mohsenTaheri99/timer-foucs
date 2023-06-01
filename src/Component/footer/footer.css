@@ -18,3 +18,21 @@
     height: 35px;
     font-size: 25px;
 }
+@media screen and (max-width: 600px){
+    .footer-cuntener{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+    }
+    .sosial-cuntener{
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding-bottom: 0 ;
+    }
+    .sosial-cuntener a {
+        height: 35px;
+        font-size: 25px;
+        margin: 5px;
+    }
+}

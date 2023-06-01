@@ -59,8 +59,10 @@
 
 }
 .t-date{
+    text-align: end;
 }
 .highlit{
+    text-align: end;
     font-weight: 500;
     color: rgb(37, 150, 190);
     background: white;
@@ -68,7 +70,6 @@
     padding : 0px 7px 3px 7px
 
 }
-
 @media screen and (min-width: 600px) and (max-width: 1000px) {
     .time-date-cuntener{
         flex-direction: row-reverse;
@@ -97,10 +98,10 @@
     .date-cuntener{
         font-size: 12px;
         font-weight: 500;
-        width: fit-content;
         display: flex;
         flex-direction: row;
-        align-items: end;
+        align-items: center;
+        justify-content: end;
         height: 100%;
 
     

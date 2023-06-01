@@ -9,12 +9,12 @@ import EditeTodo from '../EditeTodo/EditeTodo';
 
 
 function ShowTodoList({todo,setTodo}) {
-
     const [undo,setUndo]= useState(true)
     const [editeItem,setediteItem]= useState('')
-
-
-
+    
+    const  Highlighting ={background: '#3baa1d ',color: 'white'}
+    
+    console.log(todo)
     function complete(event){
         setediteItem('')
         const id = event.currentTarget.id;
@@ -113,9 +113,9 @@ function ShowTodoList({todo,setTodo}) {
                             <div className="color-todo" style={{background: i.color}}>
                                 <div>{index+1}</div>
                             </div>
-                            <div className='noteTodo' style={{textDecoration: i.complete?'line-through green 2px': '' }}>
-                                <h3>{i.todo}</h3>
-                                {i.note.map((note)=> <p>{note}</p>)}
+                            <div className='noteTodo' >
+                                <h3 style={i.complete? Highlighting: {}}>{i.todo}</h3>
+                                {i.note.map((note)=> <p style={i.complete? Highlighting: {}}>{note}</p>)}
                             </div>
                             <div className="button-cunteber-todo">
                                 <div className='cuntener-todo-b'>

@@ -1,0 +1,33 @@
+.toggle-bg-s{
+    padding: 5px 5px;
+    width: 55px;
+    /* box-shadow: inset 0 0 5px rgb(37, 150, 190); */
+    /* border: 1px rgb(37, 150, 190) solid; */
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    font-size: 20px;
+
+}
+.toggle-thumb-s{
+    /* display: none; */
+    top: 50%;
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background: rgb(37, 150, 190);
+    transition: 0.2s;
+
+}
+.toggle-on-s{
+    left: 100%;
+    transform: translate(-100%,-50%);
+    background: rgb(37, 150, 190);
+    border: 2px rgb(37, 150, 190) solid;
+}
+.toggle-off-s{
+    border: 2px rgb(37, 150, 190) solid;
+    background: rgb(37, 150, 190);
+    left: 0;
+    transform: translate(0%,-50%);
+}

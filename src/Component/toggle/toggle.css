@@ -2,8 +2,8 @@
     width: 25px;
     height: 10px;
     /* border: 1px solid black; */
-    box-shadow: inset 0 0 5px rgba(0, 0, 0, 0.226);
-    background: #f2e9e4;
+    box-shadow: inset 0 0 5px rgb(37, 150, 190);
+    /* background: #f2e9e4; */
     border-radius: 12px;
     position: relative;
 }
@@ -22,9 +22,12 @@
 .toggle-on{
     left: 100%;
     transform: translate(-50%,-50%);
-
+    background: rgb(37, 150, 190);
+    border: 2px rgb(37, 150, 190) solid;
 }
 .toggle-off{
+    border: 2px rgb(37, 150, 190) solid;
+    background: rgb(219, 219, 219);
     left: 0;
     transform: translate(-50%,-50%);
 }

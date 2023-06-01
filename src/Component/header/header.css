@@ -14,17 +14,18 @@
     height: 100%;
     font-size: large;
     background: #fcfcfc;
-    box-shadow:  3px 3px 1px rgba(0, 0, 0, 0.158);
+    border: 1px solid rgb(37, 150, 190);
+    /* box-shadow:  3px 3px 1px rgba(0, 0, 0, 0.158); */
     padding: 0 0px 0 10px;
     border-radius: 10px;
 }
 .profile .name{
-    font-size: 20px;
+    font-size: 18px;
     margin: 0px 10px;
     padding-bottom: 6px;
 }
 .profile .profile-picture{
-    font-size: 30px;
+    font-size: 25px;
     margin: 0px 10px 0 0;
     padding-top: 4px;
 }
@@ -34,24 +35,42 @@
     align-items: center;
     height: 100%;
     font-size: large;
-    background: #fcfcfc;
-    box-shadow:  3px 3px 1px rgba(0, 0, 0, 0.158);
-    padding: 0 10px 0 10px;
+    padding: 0 10px 0 0;
     border-radius: 10px;
     margin-right: 10px;
     width: 100%;
 }
+.idk h1{
+    font-size: large;
+    margin: auto;
+}
 .darkmode{
-    margin-left: 10px;
-    margin-right:auto ;
     display: flex;
+    background: rgb(255, 255, 255);
     flex-direction: row-reverse;
     justify-content: center;
     align-items: center;
     font-size: small;
+    /* box-shadow:  3px 3px 1px rgba(0, 0, 0, 0.158); */
+    border: 1px rgb(37, 150, 190) solid;
+    border-radius: 10px;
+    overflow: hidden;
+}
+.mute{
+    margin-right:auto ;
+    margin: 0;
+    width: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .darkmode span{
     margin-left: 15px;
     padding-bottom: 4px;
     font-weight: 500;
+}
+.lable-darkmod{
+    font-size: 20px;
+    padding: 2px;
+    margin-left: 12px;
 }

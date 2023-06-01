@@ -1,0 +1,39 @@
+.mian-cuntener-stats{
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: end;
+    position: relative;
+    overflow-y: auto;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+.stats-header{
+    box-shadow: var(--sh-b);
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: end;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 15px;
+}
+.stats-header h3{
+    margin-right: 15px;
+}
+
+.stats{
+    width: 100%;
+    background: white;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: end;
+    align-items: start;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: var(--sh-b);
+}

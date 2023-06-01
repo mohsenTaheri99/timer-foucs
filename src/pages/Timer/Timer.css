@@ -30,8 +30,9 @@
 }
 @media screen and (max-width: 600px) {
     .main-time-cuntener{
-        grid-template-columns:  1.1fr 1fr;
-        grid-template-rows: 60px calc(100% - 200px - 60px - 105px) 200px 60px;
+        height: calc(100% - 75px);
+        grid-template-columns:  1fr 1fr;
+        grid-template-rows: 60px  200px calc(100% - 200px - 60px - 60px - 45px  ) 60px;
         grid-template-areas: 
             "header header"
             "todo timer"
@@ -44,7 +45,13 @@
     position: relative;
     grid-area: todo;
 
-    background-image:  radial-gradient(#D4A373 1.2000000000000002px, transparent 1.2000000000000002px), radial-gradient(#D4A373 1.2000000000000002px, #faedcd 1.2000000000000002px);
+    /* background-image:  radial-gradient(#D4A373 1.2000000000000002px, transparent 1.2000000000000002px), radial-gradient(#D4A373 1.2000000000000002px, #faedcd 1.2000000000000002px); */
+    /* background-image: url(https://thumbs.dreamstime.com/b/sheet-paper-seamless-repeatable-texture-background-sheet-light-beige-blank-paper-seamless-repeatable-texture-background-162581623.jpg); */
+    background: url(https://static.vecteezy.com/system/resources/thumbnails/000/374/866/small/Background_1_A.jpg) ;
+    background: url(https://static.vecteezy.com/system/resources/previews/005/907/561/original/hand-drawn-citrus-background-lemon-seamless-pattern-yellow-fruit-ornament-for-wallpaper-wrapping-paper-textile-menu-food-package-design-and-decoration-vector.jpg);
+    background-size: 500px !important;
+    background-repeat: repeat;
+
     background-size: 48px 48px;
     background-position: 0 0,24px 24px;
 
@@ -84,7 +91,6 @@
     flex-direction: column;
     font-size: medium;
     position: relative;
-    transition: background-color 2s;
     box-shadow: var(--sh-b);
 }
 .show-time{
